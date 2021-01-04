@@ -19,3 +19,5 @@ import torch
 torch.cuda
 torch.cuda.is_available()
 ```
+若结果为True，则证明安装成功
+![测试torch](../assets/torch-test.png) 
