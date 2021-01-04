@@ -2,6 +2,9 @@
 ![anaconda虚拟环境配置](../assets/anaconda-create.png)  
 ### 2. 激活虚拟环境
 命令行输入`conda active PyTorch`  
-![激活虚拟环境](../assets/active-environment.png)  
-注：若为设置环境变量，可参考 https://blog.csdn.net/mars_xiaolei/article/details/82798640
+![激活虚拟环境](../assets/active-environment.png)   
+注：若未设置环境变量，可参考 https://blog.csdn.net/mars_xiaolei/article/details/82798640
 ### 3. 安装PyTorch
+①查看cuda版本
+桌面右键→NVIDA控制面板→系统信息→组件→产品名称
+![cuda版本](../assets/nvida-version.png)
