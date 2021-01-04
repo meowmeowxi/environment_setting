@@ -13,3 +13,9 @@
 ![复制conda命令](../assets/pytorch-download.png)  
 ③命令行安装PyTorch  
 ![安装PyTorch](../assets/pytorch-setup.png) 
+### 4. 测试是否安装成功
+```
+import torch
+torch.cuda
+torch.cuda.is_available()
+```
