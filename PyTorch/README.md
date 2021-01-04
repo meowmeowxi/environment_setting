@@ -8,3 +8,6 @@
 ①查看cuda版本
 桌面右键→NVIDA控制面板→系统信息→组件→产品名称
 ![cuda版本](../assets/nvida-version.png)
+②复制conda命令
+进入PyTorch官网https://pytorch.org/get-started/locally/ ,选择目标系统配置，复制conda命令
+![复制conda命令](../assets/pytorch-download.png)
