@@ -13,6 +13,7 @@
 ![复制conda命令](../assets/pytorch-download.png)  
 ③命令行安装PyTorch  
 ![安装PyTorch](../assets/pytorch-setup.png) 
+注：若显示包不可用，可从清华镜像重新下载 https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/win-64/
 ### 4. 测试是否安装成功
 ```
 import torch
