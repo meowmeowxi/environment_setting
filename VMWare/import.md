@@ -13,4 +13,7 @@ https://releases.ubuntu.com/20.04/
 答：进入BIOS，开启Intel Virtualization Technology
 以华硕电脑为例，F2进入BISO，进入高级→找到Intel Virtualization Technology，设置为enable，保存后退出即可  
 ![BIOSSetting](../assets/VMWare/bios-setting.png)
-补充教程：https://zhuanlan.zhihu.com/p/38797088
+
+补充教程：https://zhuanlan.zhihu.com/p/38797088  
+
+注：开机后会询问是否安装必备软件，按需勾选docker后续可免安装呦
