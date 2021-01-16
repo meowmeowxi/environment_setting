@@ -10,7 +10,7 @@
 在nju文件夹里初始化node：`npm init`  
 新建index.js `vim index.js` 代码如下：   
 ![index.js 1](../assets/Docker/server-1.png)
-![index.js 2](../assets/Docker/server-2.png)
+![index.js 2](../assets/Docker/server-2.png)  
 安装包`npm install express --registry=https://registry.npm.taobao.org`、`npm install mongodb --registry=https://registry.npm.taobao.org`  
 ![npm install](../assets/Docker/npm-install.png)
 #### 4.开启mongo容器
