@@ -13,5 +13,5 @@
 ![npm install](../assets/Docker/npm-install.png)
 #### 4.开启mongo容器
 开启：`docker run -d -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo`  
-查看: `docker ps`
+查看: `docker ps`  
 ![npm install](../assets/Docker/mongo-network.png)
