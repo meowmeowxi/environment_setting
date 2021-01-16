@@ -24,3 +24,5 @@
 #### 6.测试两容器是否可以通信
 `docker attach nju-node`、`ping -c 5 nju-mongo`，若有数据返回，则证明可以通信。（ctrl+c停止）
 ![node attach mongo](../assets/Docker/node-mongo.png)
+#### 7.测试应用程序
+`curl -i localhost:63010`或`curl -i 0.0.0.0:63010`，若有数据返回，则证明可以通信。（ctrl+c停止）
