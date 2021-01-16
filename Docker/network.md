@@ -31,3 +31,5 @@
 新建窗口（win + →），`curl -i 0.0.0.0:63010`,若返回OK，则证明代码可运行。否则可在node窗口查看报错信息，修改代码后重启容器（`docker restart nju-node`），再次测试。
 ![node attach mongo](../assets/Docker/node-mongo.png)  
 `curl  0.0.0.0:63010/get-test`有和在浏览器中测试相同的效果
+#### 9.浏览器端测试
+查看本机端口`ifconfig`,ens33 中的inet为虚拟机ip，物理机浏览器输入`192.168.40.128:63010`即可查看端口。
