@@ -15,3 +15,7 @@
 开启：`docker run -d -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo`  
 查看: `docker ps`  
 ![npm install](../assets/Docker/mongo-network.png)
+#### 5.开启node容器
+开启：`docker run -it -v /home/miao/code/nju/:/nju/ -p 0.0.0.0:63010:63010 --name=nju-node --network miao-test --network-alias nju-node node bash`  
+查看: `docker ps`  
+![npm install](../assets/Docker/node-network.png)
