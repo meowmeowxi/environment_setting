@@ -27,3 +27,7 @@
 #### 7.开启node服务
 `docker exec -it nju-node /bin/bash`，进入nju文件夹，运行index.js,`node index.js`
 ![node start](../assets/Docker/node-start.png)
+#### 8.测试node代码
+新建窗口（win + →），`curl -i 0.0.0.0:63010`,若返回OK，则证明代码可运行。否则可在node窗口查看报错信息，修改代码后重启容器（`docker restart nju-node`），再次测试。
+![node attach mongo](../assets/Docker/node-mongo.png)  
+`curl  0.0.0.0:63010/get-test`有和在浏览器中测试相同的效果
