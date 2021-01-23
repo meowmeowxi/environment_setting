@@ -8,7 +8,7 @@ ps：若安装按钮为灰色:
 ### 3.挂载 CD-ROM
 `mount -t iso9660 /dev/cdrom /mnt`
 ### 4.解压 VMwwre Tools 捆绑包
-`tar xzvf /mnt/cdrom/VMwareTools-x.x.x-xxxx.tar.gz -C /tmp/`
+`tar xzvf /mnt/VMwareTools-x.x.x-xxxx.tar.gz -C /tmp/`
 ### 5.安装 VMware Tools
 `cd /tmp/vmware-tools-distrib/`  
 `sudo ./vmware-install.pl -d`
