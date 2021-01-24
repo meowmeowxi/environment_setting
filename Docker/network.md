@@ -16,8 +16,10 @@
 #### 4.开启mongo容器
 开启：`docker run -d -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo`  
 查看: `docker ps`  
-ps:报错`docker: Error response from daemon: No command specified.`  
+ps:①报错`docker: Error response from daemon: No command specified.`  
 解决方案：命令后加`/bin/bash`,如`docker run -d -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`
+②秒退→添加it
+`docker run -itd -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`
 ![mongo network](../assets/Docker/mongo-network.png)
 #### 5.开启node容器
 开启：`docker run -it -v /home/miao/code/nju/:/nju/ -p 0.0.0.0:63010:63010 --name=nju-node --network miao-test --network-alias nju-node node bash`  
