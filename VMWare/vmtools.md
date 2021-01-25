@@ -22,7 +22,7 @@ ps:若没有hgfs文件夹:
 ps：挂载的文件夹必须为空，否则会报错
 ![share](../assets/VMWare/mount-4.png)  
 ### 8.开机自动挂载共享文件夹
-①查看当前用户  
+①查看当前用户，看uid和gid    
 `id darren`   
 ②编辑 fstab 文件  
 `sudo vim /etc/fstab`  
