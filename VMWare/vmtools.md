@@ -22,10 +22,11 @@ ps:若没有hgfs文件夹:
 ps：挂载的文件夹必须为空，否则会报错
 ![share](../assets/VMWare/mount-4.png)  
 ### 8.开机自动挂载共享文件夹
-①查看当前用户`id darren`   
+①查看当前用户  
+`id darren`   
 ②编辑 fstab 文件  
 `sudo vim /etc/fstab`  
-`host:/share   /mnt/hgfs/share   fuse.vmhgfs-fuse   allow_other,uid=1000,gid=1000  0   0`  
+`.host:/share   /mnt/hgfs/share   fuse.vmhgfs-fuse   allow_other,uid=1000,gid=1000  0   0`  
 ![share](../assets/VMWare/host.png) 
 参考教程:  
 https://kb.vmware.com/s/article/1022525?lang=zh_CN  
