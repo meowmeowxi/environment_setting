@@ -19,10 +19,18 @@ ps：若安装按钮为灰色:
 ps:若没有hgfs文件夹:  
 `mkdir hgfs`  
 `sudo vmhgfs-fuse .host:/ /mnt/hgfs`  
+ps：挂载的文件夹必须为空，否则会报错
 ![share](../assets/VMWare/mount-4.png)  
+### 8.开机自动挂载共享文件夹
+①查看当前用户`id darren`   
+②编辑 fstab 文件  
+`sudo vim /etc/fstab`  
+`host:/share   /mnt/hgfs/share   fuse.vmhgfs-fuse   allow_other,uid=1000,gid=1000  0   0`  
+![share](../assets/VMWare/host.png) 
 参考教程:  
 https://kb.vmware.com/s/article/1022525?lang=zh_CN  
 https://stuff.mit.edu/afs/sipb/project/vmdialup/archive/i386_linux24.old/lib/vmware-console/help/esx/vmtools_install_linux.htm  
 https://blog.csdn.net/theVicTory/article/details/72976164  
 https://blog.csdn.net/qq_40259641/article/details/79022844  
-https://www.jianshu.com/p/217e8cc316f3
+https://www.jianshu.com/p/217e8cc316f3  
+http://www.linderun.com/vmware-workstation-15-pro-h5qye
