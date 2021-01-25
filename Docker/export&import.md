@@ -9,4 +9,4 @@
 ### 导入镜像
 ### 1. 进入放置导入包的目录
 ### 2. 导入镜像
-`docker import - my-mongo >mongo.tar`
+`docker import - my-mongo <mongo.tar`
