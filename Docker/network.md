@@ -19,8 +19,8 @@
 查看: `docker ps`  
 ps:①报错`docker: Error response from daemon: No command specified.`  
 解决方案：命令后加`/bin/bash`,如`docker run -d -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`  
-②秒退→添加it
-`docker run -itd -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`  
+②秒退  
+解决方案：添加it，`docker run -itd -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`  
 ③报错`Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :connect@src/mongo/shell/mongo.js:341:17`  
 解决方案：进入容器启动服务`mongod --dbpath /data/db`  
 ④提示外部访问需`--bind_ip`  
