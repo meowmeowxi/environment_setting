@@ -20,6 +20,8 @@ ps:①报错`docker: Error response from daemon: No command specified.`
 解决方案：命令后加`/bin/bash`,如`docker run -d -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`
 ②秒退→添加it
 `docker run -itd -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`
+③报错`Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :connect@src/mongo/shell/mongo.js:341:17`  
+解决方案：进入容器启动服务`mongod --dbpath /data/db`
 ![mongo network](../assets/Docker/mongo-network.png)
 #### 5.开启node容器
 开启：`docker run -it -v /home/miao/code/nju/:/nju/ -p 0.0.0.0:63010:63010 --name=nju-node --network miao-test --network-alias nju-node node bash`  
@@ -38,4 +40,5 @@ ps:①报错`docker: Error response from daemon: No command specified.`
 #### 9.浏览器端测试
 查看本机端口`ifconfig`,ens33 中的inet为虚拟机ip，物理机浏览器输入`192.168.40.128:63010`即可查看端口。  
 
-参考教程：https://tuture.co/2020/01/01/cd44c84/
+参考教程：https://tuture.co/2020/01/01/cd44c84/  
+https://www.pianshen.com/article/69421182108/
