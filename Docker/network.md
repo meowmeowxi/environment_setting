@@ -18,11 +18,14 @@
 开启：`docker run -d -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo`  
 查看: `docker ps`  
 ps:①报错`docker: Error response from daemon: No command specified.`  
-解决方案：命令后加`/bin/bash`,如`docker run -d -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`
+解决方案：命令后加`/bin/bash`,如`docker run -d -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`  
 ②秒退→添加it
-`docker run -itd -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`
+`docker run -itd -v /home/miao/code/nju/nju-mongo/:/data/db/ --name nju-mongo --network miao-test --network-alias nju-mongo mongo /bin/bash`  
 ③报错`Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :connect@src/mongo/shell/mongo.js:341:17`  
-解决方案：进入容器启动服务`mongod --dbpath /data/db`
+解决方案：进入容器启动服务`mongod --dbpath /data/db`  
+④提示外部访问需`--bind_ip`  
+解决方案：①进入容器`apt-get install vim`
+[阿是在报错套娃啊]
 ![mongo network](../assets/Docker/mongo-network.png)
 #### 5.开启node容器
 开启：`docker run -it -v /home/miao/code/nju/:/nju/ -p 0.0.0.0:63010:63010 --name=nju-node --network miao-test --network-alias nju-node node bash`  
