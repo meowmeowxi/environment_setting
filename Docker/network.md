@@ -2,6 +2,7 @@
 #### 1. 新建内部网络
 新建： `docker network create miao-test`  
 展示： `docker network ls`  
+查看某个网络的信息： `docker network inspect miao-test`  
 ![docker network](../assets/Docker/network.png)
 #### 2. 新建项目文件夹
 新建文件夹nju： `mkdir nju`  
