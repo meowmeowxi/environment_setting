@@ -27,7 +27,7 @@ ps：挂载的文件夹必须为空，否则会报错
 ②编辑 fstab 文件  
 `sudo vim /etc/fstab`  
 `.host:/share   /mnt/hgfs/share   fuse.vmhgfs-fuse   allow_other,uid=1000,gid=1000  0   0`  
-![share](../assets/VMWare/host.png) 
+![share](../assets/VMWare/host.png)   
 参考教程:  
 https://kb.vmware.com/s/article/1022525?lang=zh_CN  
 https://stuff.mit.edu/afs/sipb/project/vmdialup/archive/i386_linux24.old/lib/vmware-console/help/esx/vmtools_install_linux.htm  
