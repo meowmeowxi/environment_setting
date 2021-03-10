@@ -9,5 +9,7 @@
 `apt-get update`,`apt-get install sudo`
 #### 5. 安装mongodb
 `sudo apt install mongodb`  
+报错①输入`mongo`测试，connection attempt failed mongo.js:257:13  
+解决方案：https://stackoverflow.com/questions/51812931/does-not-start-mongodb-4  
 #### 5. 安装node
 `sudo apt-get install nodejs`,`sudo apt-get install npm`
