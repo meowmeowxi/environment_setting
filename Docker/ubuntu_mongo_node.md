@@ -9,6 +9,5 @@
 `apt-get update`,`apt-get install sudo`
 #### 5. 安装mongodb
 `sudo apt install mongodb`  
-检查是否启动:`sudo systemctl status mongodb`
 #### 5. 安装node
 `sudo apt-get install nodejs`,`sudo apt-get install npm`
