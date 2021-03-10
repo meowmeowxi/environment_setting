@@ -12,7 +12,10 @@
 `mongod`开启服务  
 报错①输入`mongo`测试，connection attempt failed mongo.js:257:13  
 解决方案：https://stackoverflow.com/questions/51812931/does-not-start-mongodb-4  
-![mongostart](../assets/Docker/mongostart.png)
+![mongostart](../assets/Docker/mongostart.png)  
+注：默认装的版本是3.6.8，想升级版本，参考教程如下  
+https://mongodb.net.cn/manual/tutorial/install-mongodb-on-ubuntu/ ，https://blog.csdn.net/yutu75/article/details/110941936    
+默认没安装wget,`apt install wget`。但是报错Unable to locate package mongodb-org，检查数遍无果遂放弃
 #### 6. 安装node
 `sudo apt-get install nodejs`,`sudo apt-get install npm`
 #### 为映射文件夹，需要新建容器，但现有容器已下载了一些数据，故考虑先更新镜像，再基于更新后的镜像新建容器
