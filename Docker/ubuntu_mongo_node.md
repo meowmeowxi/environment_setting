@@ -9,6 +9,7 @@
 `apt-get update`,`apt-get install sudo`
 #### 5. 安装mongodb
 `sudo apt install mongodb`  
+`mongod`开启服务  
 报错①输入`mongo`测试，connection attempt failed mongo.js:257:13  
 解决方案：https://stackoverflow.com/questions/51812931/does-not-start-mongodb-4  
 ![mongostart](../assets/Docker/mongostart.png)
