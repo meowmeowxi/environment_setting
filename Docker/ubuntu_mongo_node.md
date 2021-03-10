@@ -19,5 +19,5 @@
 `docker commit -m="has update" -a="miao" nju_ubuntu test_ubuntu:v2`  
 https://www.runoob.com/docker/docker-image-usage.html
 #### 8.映射文件夹
- `docker run -itd -v /home/miao/code/ubuntu-test/nju-mongo/:/data/db/ -v /home/miao/code/ubuntu-test/:/ubuntu-test/ --name=nju-ubuntu test_ubuntu:v2`
+ `docker run -itd -v /home/miao/code/ubuntu-test/nju-mongo/:/data/db/ -v /home/miao/code/ubuntu-test/:/ubuntu-test/ --name=nju-ubuntu test_ubuntu:v2`  
  ![folder](../assets/Docker/folder.png)
