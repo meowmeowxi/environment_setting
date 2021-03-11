@@ -37,3 +37,35 @@ https://www.huaweicloud.com/articles/cf9d2ffbfeefb2bfa275d5c7d9820899.html
 https://www.aiuai.cn/aifarm1201.html
 #### 12.运行adminMongo
 `cd usr/local/lib/node_modules/admin-mongo`,`npm start`,由于服务启在docker内，物理机浏览器访问`http://172.17.0.2:1234`,即可进行界面化管理
+#### 13.docker内安装code server
+下载：`cd /home`,`wget https://github.com/cdr/code-server/releases/download/v3.9.1/code-server-3.9.1-linux-amd64.tar.gz`  
+https://github.com/cdr/code-server/releases  
+解压：`tar -xvzf code-server-3.9.1-linux-amd64.tar.gz`  
+`mv code-server-3.9.1-linux-amd64 code-server`  
+使代码服务器二进制可执行文件：`cd code-server`  
+`chmod +x code-server`  
+运行代码服务器：`./code-server --port 8000`
+参考教程：https://bynss.com/codes/451806.html  
+https://www.digitalocean.com/community/tutorials/how-to-set-up-the-code-server-cloud-ide-platform-on-ubuntu-18-04  
+#### 14.在启动时运行代码服务器
+`sudo apt install nano`,`nano /lib/systemd/system/code-server.service`    
+将以下粘贴到文件,
+`[Unit]
+Description=Code Server Service
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=10
+WorkingDirectory=/home/code-server/code-server
+Environment="PASSWORD=<password>"
+ExecStart=/home/code-server/code-server/code-server --port 8000
+StandardOutput=file:/var/log/code-server-output.log
+StandardError=file:/var/log/code-server-error.log
+
+[Install]
+WantedBy=multi-user.target`  
+启用并启动新创建的服务,
+`systemctl enable code-server
+systemctl start code-server`
