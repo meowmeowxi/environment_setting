@@ -74,3 +74,9 @@ systemctl start code-server`
 `docker commit -m="without network" -a="miao" nju_ubuntu test_ubuntu:v3`  
 #### 16. 启动docker实例
 `docker run -itd -p 0.0.0.0:63010:63010 -p 0.0.0.0:1234:1234 -p 0.0.0.0:8000:8000 -v /home/miao/code/ubuntu-test/nju-mongo/:/data/db/ -v /home/miao/code/ubuntu-test/:/ubuntu-test/ --name=nju-ubuntu2 test_ubuntu:v3`
+#### 17. 启动mongo
+`docker exec -it nju-ubuntu3 /bin/bash`,`mongod`
+#### 18. 启动node
+`cd /ubuntu-test`,`node index.js`,调成桥接模式,ens33 inet后ip即可访问,****:63010
+#### 19. 启动adminmongo
+`cd usr/local/lib/node_modules/admin-mongo`,`npm start`,****:1234
