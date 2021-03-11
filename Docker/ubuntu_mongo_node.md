@@ -70,3 +70,7 @@ WantedBy=multi-user.target
 启用并启动新创建的服务,
 `systemctl enable code-server
 systemctl start code-server`
+#### 15. 再次更新镜像
+`docker commit -m="without network" -a="miao" nju_ubuntu test_ubuntu:v3`  
+#### 16. 启动docker实例
+`docker run -itd -p 0.0.0.0:63010:63010 -p 0.0.0.0:1234:1234 -p 0.0.0.0:8000:8000 -v /home/miao/code/ubuntu-test/nju-mongo/:/data/db/ -v /home/miao/code/ubuntu-test/:/ubuntu-test/ --name=nju-ubuntu2 test_ubuntu:v3`
