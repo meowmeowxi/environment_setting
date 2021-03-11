@@ -80,3 +80,5 @@ systemctl start code-server`
 `cd /ubuntu-test`,`node index.js`,调成桥接模式,ens33 inet后ip即可访问,****:63010
 #### 19. 启动adminmongo
 `cd usr/local/lib/node_modules/admin-mongo`,`npm start`,****:1234
+#### 20. 查询code server服务状态
+`lsof -i:8000`,或`ps -aux |grep code-server`
