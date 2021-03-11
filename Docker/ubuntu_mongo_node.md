@@ -49,8 +49,8 @@ https://github.com/cdr/code-server/releases
 https://www.digitalocean.com/community/tutorials/how-to-set-up-the-code-server-cloud-ide-platform-on-ubuntu-18-04  
 #### 14.在启动时运行代码服务器
 `sudo apt install nano`,`nano /lib/systemd/system/code-server.service`    
-将以下粘贴到文件,
-`[Unit]
+将以下粘贴到文件,  
+```[Unit]
 Description=Code Server Service  
 After=network.target  
 
@@ -65,7 +65,8 @@ StandardOutput=file:/var/log/code-server-output.log
 StandardError=file:/var/log/code-server-error.log  
 
 [Install]  
-WantedBy=multi-user.target`  
+WantedBy=multi-user.target
+```  
 启用并启动新创建的服务,
 `systemctl enable code-server
 systemctl start code-server`
