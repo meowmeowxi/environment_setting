@@ -81,4 +81,5 @@ systemctl start code-server`
 #### 19. 启动adminmongo
 `cd usr/local/lib/node_modules/admin-mongo`,`npm start`,****:1234
 #### 20. 查询code server服务状态
-`lsof -i:8000`,或`ps -aux |grep code-server`
+`lsof -i:8000`,或`ps -aux |grep code-server`  
+查看网络端口，容器外`docker port nju-ubuntu2`,查看容器内部运行的进程`docker top nju-ubuntu2`
