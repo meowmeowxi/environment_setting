@@ -33,6 +33,7 @@ https://www.huaweicloud.com/articles/cf9d2ffbfeefb2bfa275d5c7d9820899.html
 ③虚拟机关闭防火墙`sudo ufw disable`  
 ④本机浏览器访问`http://172.17.0.2:63010/get-test`
 #### 11.docker内安装adminMongo
-`npm install -g admin-mongo`,安装路径为`usr/local/lib/node_modules/admin-mongo`
+`npm install -g admin-mongo`,安装路径为`usr/local/lib/node_modules/admin-mongo`  
+https://www.aiuai.cn/aifarm1201.html
 #### 12.运行adminMongo
 `cd usr/local/lib/node_modules/admin-mongo`,`npm start`,由于服务启在docker内，物理机浏览器访问`http://172.17.0.2:1234`,即可进行界面化管理
