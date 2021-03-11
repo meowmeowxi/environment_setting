@@ -51,20 +51,20 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-the-code-server-c
 `sudo apt install nano`,`nano /lib/systemd/system/code-server.service`    
 将以下粘贴到文件,
 `[Unit]
-Description=Code Server Service
-After=network.target
+Description=Code Server Service  
+After=network.target  
 
-[Service]
-Type=simple
-Restart=on-failure
-RestartSec=10
-WorkingDirectory=/home/code-server/code-server
-Environment="PASSWORD=<password>"
-ExecStart=/home/code-server/code-server/code-server --port 8000
-StandardOutput=file:/var/log/code-server-output.log
-StandardError=file:/var/log/code-server-error.log
+[Service]  
+Type=simple  
+Restart=on-failure  
+RestartSec=10  
+WorkingDirectory=/home/code-server/code-server  
+Environment="PASSWORD=<password>"  
+ExecStart=/home/code-server/code-server/code-server --port 8000  
+StandardOutput=file:/var/log/code-server-output.log  
+StandardError=file:/var/log/code-server-error.log  
 
-[Install]
+[Install]  
 WantedBy=multi-user.target`  
 启用并启动新创建的服务,
 `systemctl enable code-server
