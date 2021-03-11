@@ -25,3 +25,10 @@ https://www.runoob.com/docker/docker-image-usage.html
 #### 8.映射文件夹
  `docker run -itd -v /home/miao/code/ubuntu-test/nju-mongo/:/data/db/ -v /home/miao/code/ubuntu-test/:/ubuntu-test/ --name=nju-ubuntu test_ubuntu:v2`  
  ![folder](../assets/Docker/folder.png)
+#### 9.数据库建库，撰写后端代码，再次复制了以前的代码
+#### 10.本机浏览器访问
+①采用NAT模式，虚拟机`ifconfig`查看端口信息  
+②物理机cmd输入`ROUTE -p add 172.17.0.0 mask 255.255.0.0 192.168.2.128`，具体参数参考下文连接  
+https://www.huaweicloud.com/articles/cf9d2ffbfeefb2bfa275d5c7d9820899.html  
+③虚拟机关闭防火墙`sudo ufw disable`  
+④本机浏览器访问`http://172.17.0.2:63010/get-test`
