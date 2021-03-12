@@ -83,3 +83,10 @@ systemctl start code-server`
 #### 20. 查询code server服务状态
 `lsof -i:8000`,或`ps -aux |grep code-server`  
 查看网络端口，容器外`docker port nju-ubuntu2`,查看容器内部运行的进程`docker top nju-ubuntu2`
+#### 21. 把code server放在虚拟机里，直接编辑映射的文件
+在ubuntu-test里安装code server,`cd code-server`,`export PASSWORD=123456 && ./code-server --port 58025 --host 0.0.0.0 `    
+https://segmentfault.com/a/1190000022267386  
+桥接模式，物理机浏览器输入虚拟机ip：58025即可访问  
+
+### 总结
+基于Ubuntu虚拟机，安装docker，docker拉取ubuntu镜像，构建容器。在Ubuntu容器内部安装mongo、node和admin mongo，容器内部node访问mongo127.0.0.1:21017端口、admin mongo访问mongo27017端口。容器暴露两个端口，一个是node的63010，一个是admin mongo的1234。容器外、虚拟机内，建立文件夹ubuntu-test，其中的子文件夹nju-mongo映射为mongo的数据存储路径/data/db/,ubuntu-test映射为node代码存储路径，code server也放在ubuntu-test内，暴露58025端口。
