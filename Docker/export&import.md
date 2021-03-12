@@ -15,4 +15,5 @@
 ### 1.导出镜像
 `docker save nju-ubuntu4 > test_ubuntu.tar`
 ### 2.导入镜像
-`docker load < test_ubuntu.tar`
+`docker load < test_ubuntu.tar`  
+https://www.hangge.com/blog/cache/detail_2411.html
