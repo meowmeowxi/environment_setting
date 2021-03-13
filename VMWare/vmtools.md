@@ -6,7 +6,13 @@ VM→install VMtools
 ps：若安装按钮为灰色:  
 ①关闭虚拟机②设置CD/DVD为自动检测③重启虚拟机，按钮可用
 ### 3.挂载 CD-ROM
-`mount -t iso9660 /dev/cdrom /mnt`
+`mount -t iso9660 /dev/cdrom /mnt`  
+报错①`overlayfs: missing 'lowerdir'`  
+解决方案：`df` https://askubuntu.com/questions/1068588/boot-problem-after-update-missing-lowerdir  
+②`mounted as readonly`  
+解决方案：`umount /mnt`,`sudo mkfs -t vfat /mnt`,` ls -l /mnt`  
+https://unix.stackexchange.com/questions/10582/dev-mounted-as-readonly  
+https://askubuntu.com/questions/101637/usb-turn-write-protection-off  
 ### 4.解压 VMwwre Tools 捆绑包
 `tar xzvf /mnt/VMwareTools-x.x.x-xxxx.tar.gz -C /tmp/`
 ### 5.安装 VMware Tools
