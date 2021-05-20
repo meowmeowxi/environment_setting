@@ -1,6 +1,6 @@
 基于mongodb和python配置网站后端环境，其中mongod、python、adminmongo(mongodb可视化管理工具)放再docker内，code server 放在映射文件夹内
 #### 1. 拉取Mongo镜像
-`docker pull ubuntu`  
+`docker pull mongo`  
 #### 2. 启动docker容器
 `docker run -itd -v /code/docker/backend/:/data/db/ --name= backend mongo`
 #### 3. 容器内安装python
